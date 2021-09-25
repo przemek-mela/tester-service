@@ -2,7 +2,9 @@ package com.tester.service.impl;
 
 import java.sql.Timestamp;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import org.apache.commons.csv.CSVRecord;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,4 +47,10 @@ public class TesterServiceImpl implements TesterService {
 	return testersList;
     }
 
+    public Set<String> testersCountries(){
+	Set<String> countries = new HashSet<String>();
+	List<Tester> testers = testerDao.findAll();
+	testers.stream().forEach(tester -> countries.add(tester.getCountry()));
+	return countries;
+    }
 }
