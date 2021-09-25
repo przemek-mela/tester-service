@@ -14,8 +14,4 @@ public class BugController {
     @Autowired
     BugService bugService;
     
-    @GetMapping("/read")
-    public void readFromFile() {
-	bugService.aquireDataFromCsv();
-    }
 }
