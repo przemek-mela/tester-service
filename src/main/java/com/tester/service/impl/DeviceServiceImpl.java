@@ -41,4 +41,5 @@ public class DeviceServiceImpl implements DeviceService{
 
 	    return devicesList;
     }
+    
 }
