@@ -28,7 +28,7 @@ public class Tester {
 	@Column(name = "first_name")
 	private String firstName;
 	@Column(name = "last_name")
-	private String lasteName;
+	private String lastName;
 	@Column(name = "country")
 	private String country;
 	@Column(name = "last_login")
