@@ -21,6 +21,12 @@ public class BugController {
     @Autowired
     BugDao bugDao;
 
+    /**
+     * Method that searches bug reports that match search criteria 
+     * @param countries - List<String> list of countries for search filter
+     * @param devices - List<Integer> list of deviceId's for search filter
+     * @return List<SearchResult> list of reported bugs matching search criteria
+     */
     @GetMapping("/search")
     public List<SearchResult> getBugs(@RequestParam("countries") Optional<List<String>> countries, @RequestParam("devices") Optional<List<Integer>> devices) {
 	return bugDao.getBugsSearchResults(countries, devices);

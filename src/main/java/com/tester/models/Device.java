@@ -12,6 +12,11 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+/**
+ * Model for Device entity
+ * @author Przemek Mela
+ *
+ */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

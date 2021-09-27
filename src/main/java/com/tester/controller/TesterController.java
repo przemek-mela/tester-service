@@ -18,6 +18,10 @@ public class TesterController {
     @Autowired
     TesterService testerService;
     
+    /**
+     * Method returns list of countries that testers come from
+     * @return List<String> list of all countries
+     */
     @GetMapping("/countries")
     public Set<String> getTesterCountries(){
 	return testerService.testersCountries();

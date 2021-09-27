@@ -14,6 +14,11 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+/**
+ * Model for Tester entity
+ * @author Przemek Mela
+ *
+ */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

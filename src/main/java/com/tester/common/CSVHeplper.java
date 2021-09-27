@@ -12,7 +12,12 @@ import org.springframework.stereotype.Component;
 @Component
 public class CSVHeplper {
 
-    public static Iterable<CSVRecord> readCSVFile(String filePath){
+    /**
+     * Method that reads and parses csv file from given path to CSVRecord object
+     * @param filePath String file path
+     * @return Iterable<CSVRecord> collection of CSVRecord objects that contains row of csv file
+     */
+    public static Iterable<CSVRecord> readCSVFile(String filePath) {
 	try (BufferedReader fileReader = new BufferedReader(new FileReader(filePath));
 		CSVParser csvParser = new CSVParser(fileReader,
 			CSVFormat.DEFAULT.withFirstRecordAsHeader().withIgnoreHeaderCase().withTrim());) {

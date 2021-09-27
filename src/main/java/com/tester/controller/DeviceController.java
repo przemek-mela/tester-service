@@ -1,6 +1,5 @@
 package com.tester.controller;
 
-
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,9 +18,13 @@ public class DeviceController {
 
     @Autowired
     DeviceDao deviceDao;
-    
+
+    /**
+     * Method that returns list of Devices currently available in database
+     * @return List<Device> list of all devices
+     */
     @GetMapping("")
-    public List<Device> getAllDevices(){
+    public List<Device> getAllDevices() {
 	return deviceDao.findAll();
     }
 }
